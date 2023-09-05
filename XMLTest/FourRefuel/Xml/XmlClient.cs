@@ -22,7 +22,7 @@ public class XmlClient : IClient
 
         if (fourRefuelResponse == null)
         {
-            throw new Exception("Unable deserialize");
+            throw new Exception("Unable to deserialize");
         }
 
         return fourRefuelResponse.Invoices.Select(i => new Invoice

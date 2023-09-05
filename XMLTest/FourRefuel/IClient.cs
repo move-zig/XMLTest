@@ -2,5 +2,5 @@
 
 public interface IClient
 {
-    Task<IEnumerable<Invoice>> GetAllAsync();
+    public Task<IEnumerable<Invoice>> GetAllAsync();
 }
