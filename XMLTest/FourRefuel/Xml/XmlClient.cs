@@ -22,7 +22,7 @@ public class XmlClient : IClient
     /// <inheritdoc/>
     public async Task<IEnumerable<Invoice>> GetAllAsync()
     {
-        using var client = this.httpClientFactory.CreateClient();
+        var client = this.httpClientFactory.CreateClient();
         using var response = await client.GetAsync(Endpoint);
         if (!response.IsSuccessStatusCode)
         {
